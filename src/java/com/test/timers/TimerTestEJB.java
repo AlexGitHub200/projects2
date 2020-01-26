@@ -27,7 +27,7 @@ import commonj.timers.*;
 @LocalBean
 public class TimerTestEJB {
 
-//programmatic timer example
+//programmatic timer example  -- is not cluster aware
     @Resource
     private TimerService timerService;
 
@@ -37,7 +37,7 @@ public class TimerTestEJB {
         timerConfig.setInfo("CalendarProgTimerDemo_Info");
         timerConfig.setPersistent(true);
         ScheduleExpression schedule = new ScheduleExpression();
-       schedule.hour("*").minute("*").second("*/10");
+        schedule.hour("*").minute("*/3");
         timerService.createCalendarTimer(schedule, timerConfig);
     }
 

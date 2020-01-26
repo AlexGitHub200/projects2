@@ -24,7 +24,9 @@ public class TimerAnnotation {
     public void execute() {
         System.out.println("Executing ...");
         System.out.println("Execution Time from 2 : " + new Date());
-        System.out.println("____________________________________________");   
+        System.out.println("__________________________________________");
+
+
     }
  
 }

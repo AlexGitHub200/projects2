@@ -20,7 +20,7 @@ import javax.ejb.Startup;
 @Startup
 //automatic timer example
 public class TimerAnnotation {
-     @Schedule(minute="*/3", hour="*")
+     @Schedule(minute="*/3", hour="*",second="*")
     public void execute() {
         System.out.println("Executing ...");
         System.out.println("Execution Time from 2 : " + new Date());
